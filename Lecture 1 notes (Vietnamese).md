@@ -15,7 +15,9 @@ Code | Description
 E1696 | cannot open source file "d3dx10.h"
 
 Giải: trong solution explorer, chuột phải project (cái tên project đc in đậm một tí), chọn properties (ở cuối cùng), linker -> input -> additional dependency -> edit -> nhập d3d10.lib.
+
 Cái dòng additional dependencies trông ntn:
+
 Additional Dependencies: d3d10.lib;%(AdditionalDependencies)
 
 Sau đó cài cái này bằng NuGet:
@@ -30,9 +32,14 @@ Gặp thêm lỗi kỳ quặc:
 Code | Description
 |---|---|
 LNK2019 | unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-LNK1120 | 1 unresolved externals	
+LNK1120 | 1 unresolved externals
 
 Giải: mở lại cái linker lúc nãy (chuột phải project -> properties -> linker), chọn all options, tìm cái SubSystem. Hiện tại nó đang là Console. Chuyển nó sang Windows.
 
 Chạy: ctrl+F5 hoặc nhấn cái nút play tam giác màu xanh.
+
+Expected: viên gạch đi từ trái sang phải từ góc giữa trái màn hình.
+
 Mẹo: trong Solution Explorer, alt+enter cho lẹ.
+
+Bài tập: làm cho viên gạch đi từ trên xuống từ góc trên giữa màn hình.
